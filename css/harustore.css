@@ -1,0 +1,516 @@
+/* ----------------------------------全体---------------------------------*/
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
+}
+
+@media (min-width:1100px) {
+    body {
+        background: url(../image/background5.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-blend-mode: lighten;
+    }
+}
+
+
+/* ----------------------------------ヘッダー ---------------------------------*/
+
+.head {
+    background-color: #007B40;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+
+/*　ハンバーガーボタン　*/
+
+.hamburger {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    right: 13px;
+    top: 3px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media (min-width:1100px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 6px;
+    background: #fff;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 20px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 30px;
+}
+
+
+/* ナビ開いてる時のボタン */
+
+.hamburger.active {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.6s;
+    -o-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    width: 0px;
+}
+
+.hamburger.active span:nth-child(1),
+.hamburger.active span:nth-child(3) {
+    background: #fff;
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+    transform: translateY(4px);
+}
+
+.hamburger.active span:nth-child(3) {
+    -webkit-transform: translateY(-16px) rotate(90deg);
+    -ms-transform: translateY(-16px) rotate(90deg);
+    -o-transform: translateY(-16px) rotate(90deg);
+    transform: translateY(-16px) rotate(90deg);
+}
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: #007B40;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+@media (min-width:1100px) {
+    nav.globalMenuSp {
+        opacity: 1;
+    }
+}
+
+nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+@media (min-width:1100px) {
+    nav.globalMenuSp ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+    justify-content: space-between;
+}
+
+nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+}
+
+nav.globalMenuSp ul li:hover {
+    background: #ddd;
+}
+
+nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration: none;
+}
+
+
+/* このクラスを、jQueryで付与・削除する */
+
+nav.globalMenuSp.active {
+    opacity: 1;
+}
+
+.head_logo {
+    text-align: center;
+    margin-top: 59px;
+}
+
+@media (min-width:1100px) {
+    .head_logo {
+        text-align: center;
+        margin-top: 100px;
+    }
+}
+
+.head_logo img {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width:1100px) {
+    .head_logo img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* ----------------------------------バックグランドﾍﾞｰｽ---------------------------------*/
+
+.main_container {
+    width: 95%;
+    margin: auto;
+}
+
+@media (min-width:1100px) {
+    .main_container {
+        width: 80%;
+    }
+}
+
+
+/* ----------------------------------サークルメニュー---------------------------------*/
+
+.circle {
+    display: block;
+}
+
+@media (min-width:1100px) {
+    .circle {
+        display: flex;
+    }
+}
+
+.circle_menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+    line-height: 170px;
+    margin-top: 10%;
+    animation-name: fuwafuwa;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0px);
+    }
+    100% {
+        transform: translate(0, -10px)
+    }
+}
+
+@media (min-width:1100px) {
+    .circle_menu {
+        background-color: rgba(255, 255, 255, 0.95);
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+        line-height: 170px;
+        margin-top: 10%;
+        justify-content: space-between;
+    }
+}
+
+.circle_menu p {
+    font-family: Swister;
+    color: #007B40;
+    font-size: 28px;
+}
+
+
+/* ----------------------------------インスタグラム/ブログ共通---------------------------------*/
+
+.post_contents {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width:1100px) {
+    .post_contents {
+        display: flex;
+        width: 100%;
+        margin-top: 10%;
+        vertical-align: bottom;
+    }
+}
+
+
+/* ----------------------------------インスタグラム---------------------------------*/
+
+.instagram {
+    width: 100%;
+}
+
+@media (min-width:1100px) {
+    .instagram {
+        justify-content: space-between;
+        width: 50%;
+    }
+}
+
+.instagram_title {
+    margin: 0 auto;
+    margin-top: 20%;
+    margin-bottom: 3%;
+    width: 40%;
+    display: flex;
+}
+
+@media (min-width:1100px) {
+    .instagram_title {
+        margin: 0 auto;
+        margin-bottom: 3%;
+        width: 40%;
+        height: 49.6px;
+        display: flex;
+    }
+}
+
+.instagram_logo {
+    width: 75%;
+    margin-right: 3%;
+    justify-content: center;
+}
+
+@media (min-width:1100px) {
+    .instagram_logo {
+        width: 70%;
+        margin-right: 3%;
+        margin: 0 auto;
+    }
+}
+
+.instagram_icon {
+    width: 23%;
+    justify-content: center;
+}
+
+@media (min-width:1100px) {
+    .instagram_icon {
+        width: 20%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1%;
+    }
+}
+
+.instagram_picture {
+    border: solid 5px #007B40;
+    width: 350px;
+    height: 380px;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 10px 60px/50px 10px;
+}
+
+@media (min-width:1100px) {
+    .instagram_picture {
+        border: solid 5px #007B40;
+        width: 400px;
+        height: 430px;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 10px 60px/50px 10px;
+    }
+}
+
+
+/* ----------------------------------ブログ---------------------------------*/
+
+.blog {
+    justify-content: space-between;
+    margin-top: 10%;
+    width: 100%;
+}
+
+@media (min-width:1100px) {
+    .blog {
+        justify-content: space-between;
+        margin-top: 0;
+        width: 50%;
+    }
+}
+
+.blog_title {
+    color: #111;
+    text-align: center;
+    font-family: Swister;
+    font-size: 50px;
+    line-height: 1;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+@media (min-width:1100px) {
+    .blog_title {
+        color: #111;
+        font-family: Swister;
+        font-size: 50px;
+        line-height: 1;
+        width: 30%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+}
+
+.blog_article {
+    border: solid 5px #007B40;
+    width: 350px;
+    height: 380px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    border-radius: 10px 60px/50px 10px;
+}
+
+@media (min-width:1100px) {
+    .blog_article {
+        border: solid 5px #007B40;
+        width: 400px;
+        height: 430px;
+        margin: 0 auto;
+        margin-bottom: 0;
+        border-radius: 10px 60px/50px 10px;
+    }
+}
+
+
+/* ----------------------------------フッター---------------------------------*/
+
+footer {
+    background-color: #E2C657;
+    width: 100%;
+    height: 220px;
+    margin-top: 10%;
+}
+
+@media (min-width:500px) {
+    footer {
+        background-color: #E2C657;
+        width: 100%;
+        height: 260px;
+        margin-top: 10%;
+    }
+}
+
+@media (min-width:1100px) {
+    footer {
+        background-color: #E2C657;
+        width: 100%;
+        height: 300px;
+        margin-top: 10%;
+    }
+}
+
+.footer_logo {
+    width: 30%;
+    margin: 0 auto;
+}
+
+@media (min-width:500px) {
+    .footer_logo {
+        width: 20%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width:1100px) {
+    .footer_logo {
+        width: 15%;
+        margin: 0 auto;
+    }
+}
+
+.footer_logo img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.postalcode {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.street_address {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.phone_number {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.inquiry {
+    text-align: center;
+    margin-bottom: 1%;
+}

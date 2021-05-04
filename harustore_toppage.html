@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/harustore.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+
+
+
+    <title>HALU STORE</title>
+</head>
+
+<body>
+    <!------------------------------- ヘッダー -------------------------------------->
+    <header>
+        <div class="head w-100">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="globalMenuSp">
+                <ul>
+                    <li><a href="#">CONCEPT</a></li>
+                    <li><a href="#">CAFE MENU</a></li>
+                    <li><a href="#">FASHION</a></li>
+                    <li><a href="#">MAP</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head_logo"><img src="image/logo.png" alt=""></div>
+    </header>
+
+
+    <!------------------------------- バックグランドﾍﾞｰｽ-------------------------------------->
+    <div class="main_container">
+
+        <!-------------------------------- サークルメニュー ----------------------------------->
+        <div class="circle">
+            <div class="circle_menu text-center rounded-circle">
+                <label><a href="#"><p>HALU STORE</p></a></label>
+            </div>
+            <div class="circle_menu text-center rounded-circle">
+                <label><a href="#"><p>cafe menu</p></a></label>
+            </div>
+            <div class="circle_menu text-center rounded-circle">
+                <label><a href="#"><p>fashion</p></a></label>
+            </div>
+        </div>
+        <!-------------------------------- インスタグラム ----------------------------------->
+        <div class="post_contents">
+            <div class="instagram">
+                <div class="instagram_title">
+                    <img class="instagram_logo" src="image/instagram.svg" alt="">
+                    <img class="instagram_icon" src="image/Instagram.png" alt="">
+                </div>
+                <div class="instagram_picture"></div>
+            </div>
+            <!-------------------------------- ブログ ----------------------------------->
+            <div class="blog">
+                <div class="blog_title">BLOG</div>
+                <div class="blog_article"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-------------------------------- フッター ----------------------------------->
+    <footer>
+        <div class="footer_logo"><img src="image/logo.png" alt=""></div>
+        <div class="postalcode">
+            <p>〒818-0005</p>
+        </div>
+        <div class="street_address">
+            <p>福岡県筑紫野市原 166-25</p>
+        </div>
+        <div class="phone_number">
+            <a href="tel:090-3669-4700">
+                <p>090-3669-4700</p>
+            </a>
+        </div>
+        <div class="inquiry">
+            <a href="#">
+                <p></p>お問い合わせ</p>
+            </a>
+        </div>
+
+
+    </footer>
+
+    <!-------------------------------- jquery ----------------------------------->
+
+    <script>
+        $(function() {
+            $('.hamburger').click(function() {
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $('.globalMenuSp').addClass('active');
+                } else {
+                    $('.globalMenuSp').removeClass('active');
+                }
+            });
+        });
+
+        ScrollReveal().reveal('.head_logo', {
+            duration: 1500, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: true // 何回もアニメーション表示するか
+        });
+
+        ScrollReveal().reveal('.circle_menu', {
+            duration: 1700, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: true // 何回もアニメーション表示するか
+        });
+
+        ScrollReveal().reveal('.blog', {
+            duration: 1500, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: true // 何回もアニメーション表示するか
+        });
+
+        ScrollReveal().reveal('.post_contents', {
+            duration: 1500, // アニメーションの完了にかかる時間
+            viewFactor: 0.5, // 0~1,どれくらい見えたら実行するか
+            reset: true // 何回もアニメーション表示するか
+        });
+    </script>
+
+
+</body>
