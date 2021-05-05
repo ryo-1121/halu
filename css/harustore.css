@@ -164,6 +164,7 @@ nav.globalMenuSp ul li {
     width: 100%;
     transition: .4s all;
     justify-content: space-between;
+    font-family: swister, sans-serif;
 }
 
 nav.globalMenuSp ul li:last-child {
@@ -277,7 +278,7 @@ nav.globalMenuSp.active {
 }
 
 .circle_menu p {
-    font-family: Swister;
+    font-family: swister, sans-serif;
     color: #007B40;
     font-size: 28px;
 }
@@ -401,7 +402,7 @@ nav.globalMenuSp.active {
 .blog_title {
     color: #111;
     text-align: center;
-    font-family: Swister;
+    font-family: swister, sans-serif;
     font-size: 50px;
     line-height: 1;
     width: 40%;
@@ -412,7 +413,8 @@ nav.globalMenuSp.active {
 @media (min-width:1100px) {
     .blog_title {
         color: #111;
-        font-family: Swister;
+        font-family: swister, sans-serif;
+        ;
         font-size: 50px;
         line-height: 1;
         width: 30%;
