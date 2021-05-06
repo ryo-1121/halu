@@ -1,7 +1,7 @@
 /* ----------------------------------全体---------------------------------*/
 
 a {
-    color: #000;
+    color: #fff;
 }
 
 a:hover {
@@ -17,7 +17,7 @@ body {
     background-blend-mode: lighten;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     body {
         background: url(../image/background5.jpg);
         background-repeat: no-repeat;
@@ -25,6 +25,45 @@ body {
         background-size: cover;
         background-color: rgba(255, 255, 255, 0.8);
         background-blend-mode: lighten;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ----------------------------------バックグランドﾍﾞｰｽ---------------------------------*/
+
+.main_container {
+    width: 95%;
+    margin: auto;
+}
+
+@media (min-width:767px) {
+    .main_container {
+        width: 80%;
+    }
+}
+
+.menu_container {
+    width: 85%;
+    margin: auto;
+}
+
+@media (min-width:767px) {
+    .menu_container {
+        width: 60%;
+        margin: auto;
     }
 }
 
@@ -54,7 +93,7 @@ body {
     text-align: center;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .hamburger {
         display: none;
     }
@@ -139,7 +178,7 @@ nav.globalMenuSp {
     transition: opacity .6s ease, visibility .6s ease;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     nav.globalMenuSp {
         opacity: 1;
     }
@@ -151,7 +190,7 @@ nav.globalMenuSp ul {
     width: 100%;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     nav.globalMenuSp ul {
         display: flex;
         justify-content: space-between;
@@ -164,7 +203,7 @@ nav.globalMenuSp ul li {
     width: 100%;
     transition: .4s all;
     justify-content: space-between;
-    font-family: swister, sans-serif;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
 }
 
 nav.globalMenuSp ul li:last-child {
@@ -194,7 +233,7 @@ nav.globalMenuSp.active {
     margin-top: 59px;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .head_logo {
         text-align: center;
         margin-top: 100px;
@@ -207,7 +246,7 @@ nav.globalMenuSp.active {
     margin: 0 auto;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .head_logo img {
         width: 300px;
         display: block;
@@ -216,16 +255,111 @@ nav.globalMenuSp.active {
 }
 
 
-/* ----------------------------------バックグランドﾍﾞｰｽ---------------------------------*/
+/* ----------------------------------フッター---------------------------------*/
 
-.main_container {
-    width: 95%;
-    margin: auto;
+footer {
+    background-image: url(../image/renga.png);
+    width: 100%;
+    height: 220px;
+    margin-top: 10%;
 }
 
-@media (min-width:1100px) {
-    .main_container {
-        width: 80%;
+@media (min-width:767px) {
+    footer {
+        width: 100%;
+        height: 320px;
+        margin-top: 10%;
+    }
+}
+
+.footer_logo {
+    width: 200px;
+    margin: 0 auto;
+}
+
+@media (min-width:767px) {
+    .footer_logo {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.footer_logo img {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.postalcode {
+    text-align: center;
+    margin-top: 2%;
+    color: #fff;
+    font-weight: bold;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width:767px) {
+    .postalcode {
+        text-align: center;
+        margin-top: 2%;
+        color: #fff;
+        font-weight: bold;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+        font-size: 25px;
+    }
+}
+
+.street_address {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width:767px) {
+    .street_address {
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+        font-size: 25px;
+    }
+}
+
+.phone_number {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width:767px) {
+    .phone_number {
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+        font-size: 25px;
+    }
+}
+
+.inquiry {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 20px;
+}
+
+@media (min-width:767px) {
+    .inquiry {
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+        font-size: 25px;
     }
 }
 
@@ -236,7 +370,7 @@ nav.globalMenuSp.active {
     display: block;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .circle {
         display: flex;
     }
@@ -265,7 +399,7 @@ nav.globalMenuSp.active {
     }
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .circle_menu {
         background-color: rgba(255, 255, 255, 0.95);
         width: 170px;
@@ -291,7 +425,7 @@ nav.globalMenuSp.active {
     width: 100%;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .post_contents {
         display: flex;
         width: 100%;
@@ -307,7 +441,7 @@ nav.globalMenuSp.active {
     width: 100%;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .instagram {
         justify-content: space-between;
         width: 50%;
@@ -318,12 +452,12 @@ nav.globalMenuSp.active {
     margin: 0 auto;
     margin-top: 20%;
     margin-bottom: 3%;
-    width: 40%;
+    width: 45%;
     height: 49.6px;
     display: flex;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .instagram_title {
         margin: 0 auto;
         margin-bottom: 3%;
@@ -339,7 +473,7 @@ nav.globalMenuSp.active {
     justify-content: center;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .instagram_logo {
         width: 70%;
         margin-right: 3%;
@@ -352,7 +486,7 @@ nav.globalMenuSp.active {
     justify-content: center;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .instagram_icon {
         /* width: 20%; */
         height: auto;
@@ -371,7 +505,7 @@ nav.globalMenuSp.active {
     border-radius: 10px 60px/50px 10px;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .instagram_picture {
         border: solid 5px #007B40;
         width: 400px;
@@ -392,7 +526,7 @@ nav.globalMenuSp.active {
     width: 100%;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .blog {
         justify-content: space-between;
         margin-top: 0;
@@ -411,7 +545,7 @@ nav.globalMenuSp.active {
     margin-bottom: 3%;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .blog_title {
         color: #111;
         font-family: swister, sans-serif;
@@ -433,7 +567,7 @@ nav.globalMenuSp.active {
     border-radius: 10px 60px/50px 10px;
 }
 
-@media (min-width:1100px) {
+@media (min-width:767px) {
     .blog_article {
         border: solid 5px #007B40;
         width: 400px;
@@ -445,75 +579,214 @@ nav.globalMenuSp.active {
 }
 
 
-/* ----------------------------------フッター---------------------------------*/
+/* ---------------------------------------------cafe menu page-----------------------------------------*/
 
-footer {
-    background-color: #E2C657;
+
+/* --------------------------------menu page title-------------------------------*/
+
+.menupage_title {
+    display: block;
+    margin-top: 5%;
+    background-image: url(../image/menu_top_image.png);
+    background-size: 100%;
     width: 100%;
-    height: 220px;
-    margin-top: 10%;
+    height: 20%;
+    text-align: center;
 }
 
-@media (min-width:500px) {
-    footer {
-        background-color: #E2C657;
-        width: 100%;
-        height: 260px;
-        margin-top: 10%;
-    }
-}
-
-@media (min-width:1100px) {
-    footer {
-        background-color: #E2C657;
-        width: 100%;
-        height: 300px;
-        margin-top: 10%;
-    }
-}
-
-.footer_logo {
-    width: 30%;
+.menupage_title p {
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
     margin: 0 auto;
 }
 
-@media (min-width:500px) {
-    .footer_logo {
-        width: 20%;
-        margin: 0 auto;
-    }
-}
 
-@media (min-width:1100px) {
-    .footer_logo {
-        width: 15%;
-        margin: 0 auto;
-    }
-}
+/* --------------------------------pickup menu-------------------------------*/
 
-.footer_logo img {
-    width: 100%;
+.pickup_menu {
     margin-top: 10%;
 }
 
-.postalcode {
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 1%;
-}
-
-.street_address {
-    text-align: center;
-    margin-bottom: 1%;
-}
-
-.phone_number {
+.pickup_menu h2 {
     color: #fff;
-    text-align: center;
-    margin-bottom: 1%;
+    font-size: 5vw;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    background-image: url(../image/menu_back_image.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    margin-left: 1%;
+    padding-left: 2%;
 }
 
-.inquiry {
+@media (min-width:767px) {
+    .pickup_menu h2 {
+        color: #fff;
+        font-size: 3vw;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+        background-image: url(../image/menu_back_image.png);
+        background-repeat: no-repeat;
+        background-size: 45%;
+        padding-left: 1%;
+    }
+}
+
+.pickup_menu_left_pic {
+    width: 100%;
     text-align: center;
-    margin-bottom: 1%;
+}
+
+.pickup_menu_right {
+    background-image: url(../image/pickup_menu_concept.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 84.81vw;
+    height: 60vw;
+    margin: 0 auto;
+    margin-top: -3%;
+}
+
+@media (min-width:767px) {
+    .pickup_menu_right {
+        margin-top: 20%;
+        background-image: url(../image/pickup_menu_concept.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 35vw;
+        height: 22vw;
+    }
+}
+
+.pickup_menu_right p {
+    padding: 18% 5% 5% 5%;
+    font-size: 3vw;
+    width: 77vw;
+    left: 50%;
+}
+
+@media (min-width:767px) {
+    .pickup_menu_right p {
+        padding: 18% 5% 5% 5%;
+        font-size: 1.2vw;
+        width: 25vw;
+    }
+}
+
+
+/* --------------------------------drink menu-------------------------------*/
+
+.drink_title {
+    margin-top: 8%;
+    width: 100%;
+    background-image: url(../image/menu_back_image.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media (min-width:750px) {
+    .drink_title {
+        margin-top: 10%;
+        background-image: url(../image/menu_back_image.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.drink_title p {
+    margin: 0;
+    padding-top: 1%;
+    text-align: center;
+    color: #fff;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+.menu_drink_list {
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu_drink_list_box {
+    width: 50%;
+    justify-content: space-between;
+    line-height: 1;
+    text-align: center;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+}
+
+@media (min-width:767px) {
+    .menu_drink_list_box {
+        width: 25%;
+        justify-content: space-between;
+        line-height: 1;
+        text-align: center;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    }
+}
+
+.menu_drink_list_box img {
+    width: 100%;
+}
+
+
+/* --------------------------------food menu-------------------------------*/
+
+.food_title {
+    margin-top: 8%;
+    width: 100%;
+    background-image: url(../image/menu_back_image.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media (min-width:750px) {
+    .food_title {
+        margin-top: 10%;
+        background-image: url(../image/menu_back_image.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.food_title p {
+    margin: 0;
+    padding-top: 1%;
+    text-align: center;
+    color: #fff;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+.menu_food_list {
+    display: flex;
+    margin-top: 5%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu_food_list_box {
+    width: 50%;
+    justify-content: space-between;
+    line-height: 1;
+    text-align: center;
+    font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+}
+
+@media (min-width:767px) {
+    .menu_food_list_box {
+        width: 25%;
+        justify-content: space-between;
+        line-height: 1;
+        text-align: center;
+        font-family: toppan-bunkyu-midashi-go-std, sans-serif;
+    }
+}
+
+.menu_food_list_box img {
+    width: 100%;
 }
