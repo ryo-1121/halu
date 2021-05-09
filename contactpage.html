@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/halustore.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bsy2knc.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+
+
+
+    <title>HALU STORE</title>
+</head>
+
+<body>
+    <!------------------------------- ヘッダー -------------------------------------->
+    <header>
+        <div class="head w-100">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="globalMenuSp">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="menu_page.html">CAFE MENU</a></li>
+                    <li><a href="#">FASHION</a></li>
+                    <li><a href="accesspage.html">ACCESS</a></li>
+                    <li><a href="contactpage.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="head_logo"><img src="image/logo.png" alt=""></div>
+    </header>
+
+
+    <!-------------------------------- お問い合わせ ----------------------------------->
+
+    <button type="button" class="btn" id="c-btn">Open Contact Form</button>
+
+    <div id="contact">
+        <form action="#">
+            <ul>
+                <h1>Contact</h1>
+                <li>
+                    <input type="text" name="name" id="name" placeholder="&#xf2c0; Full name">
+                    <input type="email" name="email" id="email" placeholder="&#xf003; Email">
+                </li>
+                <li>
+                    <textarea name="message" id="message" placeholder="&#xf040; Your message"></textarea>
+                </li>
+                <li>
+                    <input type="submit" value="Send message" class="btn" id="submit">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <!-------------------------------- フッター ----------------------------------->
+    <footer>
+        <div class="footer_logo "><img src="image/HALU_LOGO_WHITE.svg " alt=" "></div>
+        <div class="postalcode ">
+            <p>〒818-0005</p>
+        </div>
+        <div class="street_address ">
+            <p>福岡県筑紫野市原 166-25</p>
+        </div>
+        <div class="phone_number ">
+            <a href="tel:090-3669-4700 ">
+                <p>090-3669-4700</p>
+            </a>
+        </div>
+        <div class="inquiry ">
+            <a href="# ">
+                <p>お問い合わせ</p>
+            </a>
+        </div>
+
+
+    </footer>
+
+    <!-------------------------------- java script----------------------------------->
+    <script type="text/javascript">
+        (function() {
+            $('html').addClass('js');
+
+            var contactForm = {
+                container: $('#contact'),
+                config: {
+                    effect: 'slideToggle',
+                    speed: 200
+                },
+
+                init: function(config) {
+                    $.extend(this.config, config);
+
+                    $('#c-btn').on('click', this.show);
+                },
+
+                show: function() {
+                    var cf = contactForm,
+                        container = cf.container,
+                        config = cf.config;
+
+
+                    if (container.is(':hidden')) {
+                        cf.close.call(container);
+                        container[config.effect]
+                            (config.speed);
+                    }
+                },
+
+                close: function() {
+                    var $this = $('#contact');
+
+                    if ($this.find('span.close').length) return;
+
+                    $('<span class=close>-</span>')
+                        .prependTo(this)
+                        .on('click', function() {
+                            $this[contactForm.config.effect](contactForm.config.speed);
+                        })
+                }
+            };
+
+            contactForm.init({
+                effect: 'fadeToggle',
+                speed: 200
+            });
+        })();
+    </script>
+
+    <!-------------------------------- jquery ----------------------------------->
+
+    <script>
+        $(function() {
+            $('.hamburger').click(function() {
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $('.globalMenuSp').addClass('active');
+                } else {
+                    $('.globalMenuSp').removeClass('active');
+                }
+            });
+        });
+    </script>
+
+</body>
