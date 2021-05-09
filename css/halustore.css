@@ -1,8 +1,9 @@
 /* ----------------------------------全体---------------------------------*/
 
-a {
+
+/* a {
     color: #000;
-}
+} */
 
 a:hover {
     text-decoration: none;
@@ -361,6 +362,10 @@ footer {
     text-shadow: 0 0 5px #888;
 }
 
+.phone_number a {
+    color: black;
+}
+
 @media (min-width:767px) {
     .phone_number {
         color: #000;
@@ -379,6 +384,10 @@ footer {
     font-family: toppan-bunkyu-midashi-go-std, sans-serif;
     font-size: 20px;
     text-shadow: 0 0 5px #888;
+}
+
+.inquiry a {
+    color: #000;
 }
 
 @media (min-width:767px) {
