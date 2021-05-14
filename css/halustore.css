@@ -1,9 +1,8 @@
 /* ----------------------------------全体---------------------------------*/
 
-
-/* a {
-    color: #000;
-} */
+a {
+    color: none;
+}
 
 a:hover {
     text-decoration: none;
@@ -897,6 +896,10 @@ footer {
     .accesspage_cont img {
         width: 70%;
     }
+}
+
+.accesspage_cont a {
+    color: #59392b;
 }
 
 .accesspage_overview {
