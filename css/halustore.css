@@ -694,13 +694,25 @@ footer {
 
 @media (min-width:767px) {
     .pickup_menu_right {
-        margin-top: 20%;
+        left: -4%;
+        margin-top: 23%;
         background-image: url(../image/pickup_menu_concept.svg);
         background-repeat: no-repeat;
         background-size: contain;
         width: 35vw;
         height: 22vw;
         text-shadow: 0 0 5px #888;
+        transform: rotate(-9deg);
+        /* バックグラウンドイメージの傾き指定*/
+        -ms-transform: rotate(-9deg);
+        /* バックグラウンドイメージの傾き指定*/
+        -moz-transform: rotate(-9deg);
+        /* バックグラウンドイメージの傾き指定*/
+        -webkit-transform: rotate(-9deg);
+        /* バックグラウンドイメージの傾き指定*/
+        -o-transform: rotate(-9deg);
+        /* バックグラウンドイメージの傾き指定*/
+        z-index: 99;
     }
 }
 
